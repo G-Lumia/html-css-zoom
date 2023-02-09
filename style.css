@@ -62,12 +62,15 @@ header{
     background-color: var(--bg-main);
 }
 
+header div.d-flex.j-end{
+    gap:5px;
+}
+
 header div.icon{
     color:white;
-    font-size: 80%;
+    font-size: 2vh;
     background-color: var(--special-gray);
-    margin: 5px 5px;
-    border: 5px;
+    padding: 5px 5px;
     border-radius: 5px;
     text-transform: uppercase;
 }
@@ -123,7 +126,7 @@ footer{
 .btn{
     text-align: center;
     color:white;
-    padding-right:5px;
+    padding: 0 10px;
 }
 
 .btn p{
