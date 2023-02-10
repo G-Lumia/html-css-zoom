@@ -7,6 +7,11 @@
 
 /* utility */
 
+html{
+    scroll-behavior: smooth;
+}
+
+
 :root{
     --bg-main: #000000;
     --bg-footer: #222222;
@@ -45,25 +50,34 @@
     justify-content: space-between;
 }
 
-.wrapper{
-    height:100vh;
-    width:100%;
-}
+
+ /* classes and tags */
 
 body{
     font-family: 'Roboto', sans-serif;
 }
 
+
+.wrapper{
+    height:100vh;
+    width:100%;
+    overflow: hidden;
+}
+
 /* header */
 
 header{
-    height:10vh;
+    height:70px;
     width:100%;
     background-color: var(--bg-main);
 }
 
-header div.d-flex.j-end{
+.gap{
     gap:5px;
+}
+
+header div:first-child{
+    padding:30px;
 }
 
 header div.icon{
@@ -79,26 +93,21 @@ header div.icon{
 
 main{
     width:100%;
-    height:80vh;
-    overflow-y: scroll;
-    background-color: var(--bg-main);
-}
-
-.container{
+    height:calc(100vh - 140px);
     margin: 0 auto;
-    width: 100%;
+    overflow: hidden;
+    background-color: var(--bg-main);
+    padding:1rem;
 }
 
-main div.container{
-    gap:10px;
-    padding-bottom:50px;
-    padding: 30px 30px;
-}
 
-div.image{
-    width:calc(100% / 7 - 10px);
-    border: 1px solid white;
+/* images */
+
+.image{
+    width:calc(100% / 7 - 2rem);
     position:relative;
+    object-fit: cover;
+    overflow: hidden;
 }
 
 .image img{
@@ -117,7 +126,7 @@ div.image{
 /* footer */
 
 footer{
-    height:10vh;
+    height:70px;
     width:100%;
     background-color: var(--bg-footer);
     color:white;
@@ -127,6 +136,11 @@ footer{
     text-align: center;
     color:white;
     padding: 0 10px;
+    display:blocK;
+}
+
+.btn:hover{
+    color:var(--share);
 }
 
 .btn p{
@@ -150,6 +164,5 @@ footer{
     color: var(--end);
     height:100%;
     padding: 0 20px;
-    line-height: 10vh;
-    font-size: 1.5vh;
-}
+    line-height: 70px;
+    font-size: 1rem;
